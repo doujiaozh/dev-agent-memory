@@ -1,0 +1,31 @@
+{
+  "name": "dev-agent-memory",
+  "version": "0.1.0",
+  "description": "Local asset routing & memory graph for developers — sync GitHub activity into SQLite, then query your AI memory.",
+  "type": "module",
+  "main": "src/memory.js",
+  "bin": {
+    "memory": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "node --test test/db.test.js test/cleaner.test.js test/derive.test.js test/github.test.js test/memory.test.js",
+    "test:unit": "node --test test/db.test.js test/cleaner.test.js test/derive.test.js test/github.test.js",
+    "demo:offline": "node scripts/demo-offline.mjs",
+    "sync:torvalds": "node bin/cli.js sync torvalds --db ./.tmp-demo-memory.db",
+    "find:rust": "node bin/cli.js find rust --db ./.tmp-demo-memory.db"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "keywords": [
+    "memory-graph",
+    "developer-memory",
+    "asset-routing",
+    "sqlite",
+    "github",
+    "cli",
+    "local-first"
+  ],
+  "author": "",
+  "license": "MIT"
+}

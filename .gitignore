@@ -1,0 +1,8 @@
+node_modules/
+*.db
+*.db-wal
+*.db-shm
+.tmp-*
+data/
+.nyc_output/
+coverage/
